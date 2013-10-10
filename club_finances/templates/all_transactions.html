@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<ul id="latest-transaction-list">
+				{% for transaction in transactions_list %}
+				<li><a href="{% url 'transaction_detail' transaction.id %}">${{ transaction.amount }}: {{ transaction.heading }}, {{ transaction.transaction_time }}</a></li>
+				{% endfor %}
+</ul>
+
+{% endblock %}

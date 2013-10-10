@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="{{ STATIC_URL }}styles.css">
+		<meta charset="utf-8">
+		<title>Harvard Shotokan Karate Finances</title>
+	</head>
+	<body>
+		<nav id="top-nav">
+			<ul>
+				<li><a href="/">Harvard Shotokan Karate Club</a></li>
+				<li>Hello {{ user.username }}!</li>
+				<li><a href="{% url 'logout' %}">Logout</a></li>
+			</ul>
+		</nav>
+		<div id="content">
+			{% block content %}
+			{% endblock %}
+		</div>
+	</body>
+</html>

@@ -1,0 +1,11 @@
+bin/
+include/
+lib/
+local/
+__pycache__/
+# Note that we have another .gitignore that ignores things in static
+!club_finances/static/README
+*.pyc
+*.swp
+*.swo
+~*

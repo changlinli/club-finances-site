@@ -1,0 +1,59 @@
+body 
+{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 50em;
+}
+
+nav ul li
+{
+	position: relative;
+	float: left;
+	padding: 0.5em 1em 0.5em 1em;
+}
+
+#top-nav
+{
+	float: right;
+}
+
+#top-nav ul
+{
+	list-style: none;
+}
+
+#top-nav ul li
+{
+	border-style: none solid none none;
+}
+
+#content
+{
+	clear:both;
+	top: 2em;
+	position:relative;
+}
+
+#top-heading
+{
+	position: relative;
+	text-align: center;
+}
+
+#latest-transaction-list
+{
+	width: 20em;
+}
+
+#latest-transaction-list li
+{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 1em 0 1em 0;
+}
+
+#latest-transaction-list li:hover
+{
+	display: inline;
+}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>{{ transaction.heading }}</h3>
+<p>{{ transaction.comments }}</p>
+<p>{{ transaction.transaction_time }}</p>
+<p>{{ transaction.cleared_by_bank_time }}</p>
+<p>
+{% for authorizer in transaction.authorizers.all %}
+{{ authorizer.username }}
+{% endfor %}
+{{ transaction.authorizers.username }}
+</p>
+<p>{{ transaction.amount }}</p>
+
+{% endblock %}

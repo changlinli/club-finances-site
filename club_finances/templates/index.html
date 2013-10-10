@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 id="top-heading">Club Finances Overview</h1>
+
+<h3>Current Balance: {{ total_transaction_aggregates.money_sum }}</h3>
+<h3>Average of All Transactions: {{ total_transaction_aggregates.average }}</h3>
+
+{% if latest_transactions_list %}
+<h3>Latest Transactions</h3>
+<ul id="latest-transaction-list">
+	{% for transaction in latest_transactions_list|slice:":10" %}
+	<li><a href="{% url 'transaction_detail' transaction.id %}">${{ transaction.amount }}: {{ transaction.heading }}, {{ transaction.transaction_time }}</a></li>
+	{% endfor %}
+</ul>
+{% endif %}
+<h5><a href="{% url 'all_transactions' %}">More Transactions</a></h5>
+
+<h3>Upload a CSV File Here!</h3>
+<form action="{% url 'upload_file' %}" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	<p>{{ upload_csv_form.upload_file }}</p>
+	<input type="submit" value="Submit"/>
+</form>
+
+{% endblock %}
