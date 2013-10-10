@@ -3,7 +3,8 @@ Club Finances Site
 
 A Django based generic website for generating site for keeping track of a club's
 finances. This is built from the site I built for the Harvard Shotokan Karate
-club to keep track of its finances.
+club to keep track of its finances. Built to be deployed on Heroku (since that's
+free!), but can be used in many other settings.
 
 Prerequisites
 -------------
